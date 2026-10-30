@@ -1,0 +1,72 @@
+{
+  "project": "Titanic Survival Prediction with a Decision Tree",
+  "metrics": {
+    "dataset_rows": 891,
+    "training_rows": 712,
+    "validation_rows": 179,
+    "validation_split": 0.2,
+    "random_state": 42,
+    "accuracy": 0.7932960893854749,
+    "balanced_accuracy": 0.76699604743083,
+    "precision_survived": 0.7758620689655172,
+    "recall_survived": 0.6521739130434783,
+    "f1_survived": 0.7086614173228346,
+    "majority_class_baseline_accuracy": 0.6145251396648045,
+    "baseline_accuracy_gap": 0.17877094972067042
+  },
+  "model_config": {
+    "algorithm": "DecisionTreeClassifier",
+    "criterion": "gini",
+    "max_depth": 3,
+    "min_samples_leaf": 8
+  },
+  "features": [
+    "Pclass",
+    "Age",
+    "Fare",
+    "Sex"
+  ],
+  "target": "Survived",
+  "class_distribution": {
+    "0": 549,
+    "1": 342
+  },
+  "missing_values_before_preprocessing": {
+    "Pclass": 0,
+    "Age": 177,
+    "Fare": 0,
+    "Sex": 0
+  },
+  "feature_importance": [
+    {
+      "feature": "Sex",
+      "importance": 0.6440898194368321
+    },
+    {
+      "feature": "Pclass",
+      "importance": 0.21896734795552641
+    },
+    {
+      "feature": "Age",
+      "importance": 0.09137196966928691
+    },
+    {
+      "feature": "Fare",
+      "importance": 0.04557086293835461
+    }
+  ],
+  "confusion_matrix_labels": [
+    "Did not survive",
+    "Survived"
+  ],
+  "confusion_matrix": [
+    [
+      97,
+      13
+    ],
+    [
+      24,
+      45
+    ]
+  ]
+}
